@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+
+
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elegant Beauty Parlour</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAKSHI Makeover's</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
@@ -17,11 +20,14 @@
       color: white;
       padding: 1rem 2rem;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
       font-size: 2rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
     }
     .main-image {
       width: 100%;
@@ -30,6 +36,110 @@
       background-size: cover;
       background-position: center;
     }
+
+    /* Auto-scrolling marquee styles */
+    .scroll-section {
+      padding: 2rem;
+      background-color: #fffafc;
+    }
+    .scroll-block {
+      margin-bottom: 2rem;
+    }
+    .scroll-block h2 {
+      font-size: 1.8rem;
+      color: #ff1493;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .marquee-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .marquee-content {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 25s linear infinite;
+    }
+    .marquee-content img {
+      height: 150px;
+      margin-right: 1rem;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .services {
+      padding: 2rem;
+      background-color: #ffe6ec;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 1rem 0;
+      color: #ff1493;
+    }
+    .card p {
+      padding: 0 1rem 1rem;
+    }
+
+    .testimonials {
+      background-color: #fff0f5;
+      padding: 2rem;
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-size: 2rem;
+      color: #ff1493;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .testimonial p {
+      font-style: italic;
+      margin: 0;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 0.5rem;
+      color: #ff1493;
+    }
+
     .container {
       padding: 2rem;
       display: grid;
@@ -43,11 +153,12 @@
       border: none;
       border-radius: 8px;
     }
+
     form {
       background-color: white;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     }
     form h2 {
       margin-bottom: 1rem;
@@ -72,72 +183,7 @@
     form button:hover {
       background-color: #ff1493;
     }
-    .services {
-      padding: 2rem;
-      background-color: #ffe6ec;
-      text-align: center;
-    }
-    .services h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .service-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      width: 300px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 1rem 0;
-      color: #ff1493;
-    }
-    .card p {
-      padding: 0 1rem 1rem;
-    }
-    .testimonials {
-      background-color: #fff0f5;
-      padding: 2rem;
-      text-align: center;
-    }
-    .testimonials h2 {
-      font-size: 2rem;
-      color: #ff1493;
-      margin-bottom: 1.5rem;
-    }
-    .testimonial {
-      background-color: white;
-      border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .testimonial p {
-      font-style: italic;
-      margin: 0;
-    }
-    .testimonial strong {
-      display: block;
-      margin-top: 0.5rem;
-      color: #ff1493;
-    }
+
     .contact-details {
       padding: 2rem;
       background-color: #fff0f5;
@@ -163,6 +209,7 @@
       width: 32px;
       height: 32px;
     }
+
     @media (max-width: 768px) {
       .container {
         grid-template-columns: 1fr;
@@ -176,29 +223,75 @@
 </head>
 <body>
   <header>
-    <h1>SAKSHI's Makeover</h1>
-    <p>Your beauty, our passion</p>
+    <h1>SAKSHI Makeover's</h1>
+    <p>Professional Makeup Artist</p>
   </header>
 
   <div class="main-image"></div>
+
+  <!-- Gallery and Brand Scroll Sections -->
+  <div class="scroll-section">
+    <div class="scroll-block">
+      <h2>Our Gallery</h2>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <img src="https://via.placeholder.com/250x150?text=Gallery+1" alt="Gallery 1" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+2" alt="Gallery 2" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+3" alt="Gallery 3" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+4" alt="Gallery 4" />
+          <!-- Duplicate -->
+          <img src="https://via.placeholder.com/250x150?text=Gallery+1" alt="Gallery 1" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+2" alt="Gallery 2" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+3" alt="Gallery 3" />
+          <img src="https://via.placeholder.com/250x150?text=Gallery+4" alt="Gallery 4" />
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-block">
+      <h2>Our Brands</h2>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Mamaearth.jpg?raw=true" alt="Brand 1"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Revlon-Logo-1989.jpg?raw=true" alt="Brand 2"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Sugar-Cosmetics.jpg?raw=true" alt="Brand 3"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/lakme-vector-logo.png?raw=true" alt="Brand 4"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/loreal.jpg?raw=true" alt="Brand 5"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/nykaa-logo-png_seeklogo-358073.png?raw=true" alt="Brand 6"/>
+          <!-- Duplicate -->
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Mamaearth.jpg?raw=true" alt="Brand 1"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Revlon-Logo-1989.jpg?raw=true" alt="Brand 2"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Sugar-Cosmetics.jpg?raw=true" alt="Brand 3"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/lakme-vector-logo.png?raw=true" alt="Brand 4"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/loreal.jpg?raw=true" alt="Brand 5"/>
+          <img src="https://github.com/priyanshurat/BeautySalon/blob/main/nykaa-logo-png_seeklogo-358073.png?raw=true" alt="Brand 6"/>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="services">
     <h2>Our Services</h2>
     <div class="service-cards">
       <div class="card">
-        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/unnamed.png?raw=true" alt="Bridal">
+        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/unnamed.png?raw=true" alt="Bridal"/>
         <h3>Bridal Makeup</h3>
         <p>Elegant and glamorous bridal makeup to make your special day unforgettable.</p>
       </div>
       <div class="card">
-        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/67220280b9aaa4a71fdfc749_cartoon-06.png?raw=true" alt="nailart">
+        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/67220280b9aaa4a71fdfc749_cartoon-06.png?raw=true" alt="Nail Art"/>
         <h3>Nail Art and Extension</h3>
         <p>Creative nail art and durable extensions tailored to your style.</p>
       </div>
       <div class="card">
-        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/eb72bb3c-65b3-4a04-b8e2-3780742800b8.png?raw=true" alt="Hair Styling">
+        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/eb72bb3c-65b3-4a04-b8e2-3780742800b8.png?raw=true" alt="Hair Styling"/>
         <h3>Hair Styling</h3>
         <p>Trendy and classic hairstyles done by expert professionals for all occasions.</p>
+      </div>
+      <div class="card">
+        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Skin.png?raw=true" alt="Hair Styling"/>
+        <h3>Skin Care</h3>
+        <p>Radiant and healthy skin treatments by expert aestheticians for every occasion.</p>
       </div>
     </div>
   </div>
@@ -221,9 +314,8 @@
 
   <div class="container">
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3586.3412387661315!2d79.4341580803061!3d25.989636918445388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDU5JzIyLjciTiA3OcKwMjYnMjAuNSJF!5e0!3m2!1sen!2sin!4v1749873431427!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3586.3412387661315!2d79.4341580803061!3d25.989636918445388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDU5JzIyLjciTiA3OcKwMjYnMjAuNSJF!5e0!3m2!1sen!2sin!4v1749873431427!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
     <form>
       <h2>Send Us a Query</h2>
       <input type="text" name="name" placeholder="Your Name" required>
@@ -236,9 +328,9 @@
 
   <div class="contact-details">
     <h2>Contact Details</h2>
-    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Phone:</strong> +91 8318144174,   +91 6386583708</p>
     <p><strong>Email:</strong> contact@sakshismakeover.com</p>
-    <p><strong>Address:</strong> Near Central Market, Main Road, Jhansi, Uttar Pradesh</p>
+    <p><strong>Address:</strong> Near Patel Nagar, Old Konch Bus Stand Near Ganga Travels Orai, Uttar Pradesh</p>
     <p><strong>Opening Hours:</strong> 10:00 AM – 8:00 PM (Monday – Sunday)</p>
     <div class="social-icons">
       <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
@@ -247,6 +339,4 @@
     </div>
   </div>
 </body>
-</html>  
- 
- 
+</html>
