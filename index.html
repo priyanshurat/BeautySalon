@@ -1,7 +1,4 @@
-
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -15,6 +12,7 @@
       background-color: #fffafc;
       color: #333;
     }
+
     header {
       background-color: #ffb6c1;
       color: white;
@@ -22,19 +20,60 @@
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
     }
+
     header p {
       margin: 0.5rem 0 0;
     }
-    .main-image {
+
+    /* --- Responsive Image Slider --- */
+    .slider {
+      position: relative;
       width: 100%;
-      height: 400px;
-      background-image: url('jjjjjj');
-      background-size: cover;
-      background-position: center;
+      height: 70vh;
+      max-height: 600px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+      border: 2px solid white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #ff69b4;
     }
 
     /* Auto-scrolling marquee styles */
@@ -42,42 +81,45 @@
       padding: 0rem;
       background-color: #fffafc;
     }
+
     .scroll-block {
       margin-bottom: 2rem;
     }
+
     .scroll-block h2 {
       font-size: 1.8rem;
       color: #ff1493;
       margin-bottom: 1rem;
       text-align: center;
     }
+
     .marquee-container {
       overflow: hidden;
       position: relative;
       width: 100%;
     }
-    .marquee-content1 {
-      display: flex;
-      width: max-content;
-      animation: scroll-left 25s linear infinite;
-    }
+
+    .marquee-content1,
     .marquee-content2 {
       display: flex;
       width: max-content;
       animation: scroll-left 25s linear infinite;
     }
-      .marquee-content1 img {
+
+    .marquee-content1 img {
       height: 300px;
       margin-right: 1rem;
       border-radius: 10px;
       object-fit: cover;
     }
+
     .marquee-content2 img {
       height: 150px;
       margin-right: 1rem;
       border-radius: 10px;
       object-fit: cover;
     }
+
     @keyframes scroll-left {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -88,16 +130,19 @@
       background-color: #ffe6ec;
       text-align: center;
     }
+
     .services h2 {
       font-size: 2rem;
       margin-bottom: 2rem;
     }
+
     .service-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
     }
+
     .card {
       background-color: white;
       border-radius: 12px;
@@ -107,18 +152,22 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
+
     .card:hover {
       transform: scale(1.05);
     }
+
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
+
     .card h3 {
       margin: 1rem 0;
       color: #ff1493;
     }
+
     .card p {
       padding: 0 1rem 1rem;
     }
@@ -128,11 +177,13 @@
       padding: 2rem;
       text-align: center;
     }
+
     .testimonials h2 {
       font-size: 2rem;
       color: #ff1493;
       margin-bottom: 1.5rem;
     }
+
     .testimonial {
       background-color: white;
       border-radius: 10px;
@@ -141,10 +192,12 @@
       max-width: 600px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
+
     .testimonial p {
       font-style: italic;
       margin: 0;
     }
+
     .testimonial strong {
       display: block;
       margin-top: 0.5rem;
@@ -157,6 +210,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
+
     .map-container iframe {
       width: 100%;
       height: 100%;
@@ -171,9 +225,11 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     }
+
     form h2 {
       margin-bottom: 1rem;
     }
+
     form input,
     form textarea,
     form button {
@@ -184,6 +240,7 @@
       border-radius: 6px;
       font-size: 1rem;
     }
+
     form button {
       background-color: #ff69b4;
       color: white;
@@ -191,6 +248,7 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     form button:hover {
       background-color: #ff1493;
     }
@@ -200,28 +258,37 @@
       background-color: #fff0f5;
       text-align: center;
     }
+
     .contact-details h2 {
       font-size: 2rem;
       color: #ff1493;
       margin-bottom: 1rem;
     }
+
     .contact-details p {
       font-size: 1rem;
       line-height: 1.6;
     }
+
     .social-icons {
       margin-top: 1rem;
     }
+
     .social-icons a {
       margin: 0 10px;
       display: inline-block;
     }
+
     .social-icons img {
       width: 32px;
       height: 32px;
     }
 
+    /* --- Responsive Layout --- */
     @media (max-width: 768px) {
+      .slider {
+        height: 45vh;
+      }
       .container {
         grid-template-columns: 1fr;
       }
@@ -229,18 +296,51 @@
         flex-direction: column;
         align-items: center;
       }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slider {
+        height: 35vh;
+      }
+      .dots {
+        bottom: 10px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>SAKSHI Makeover's</h1>
     <p>Professional Makeup Artist</p>
   </header>
 
-  <div class="main-image"></div>
+  <!-- Responsive Image Slider -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://github.com/priyanshurat/BeautySalon/blob/main/main.jpeg?raw=true" alt="Slide 1">
+      <img src="https://github.com/priyanshurat/BeautySalon/blob/main/main.jpeg?raw=true" alt="Slide 2">
+      <img src="https://github.com/priyanshurat/BeautySalon/blob/main/main.jpeg?raw=true" alt="Slide 3">
+      <img src="https://github.com/priyanshurat/BeautySalon/blob/main/main.jpeg?raw=true" alt="Slide 4">
+      <img src="https://github.com/priyanshurat/BeautySalon/blob/main/main.jpeg?raw=true" alt="Slide 5">
+    </div>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
 
-  <!-- Gallery and Brand Scroll Sections -->
+  <!-- Gallery and Brand Sections -->
   <div class="scroll-section">
     <div class="scroll-block">
       <h2>Our Gallery</h2>
@@ -306,7 +406,7 @@
         <p>Trendy and classic hairstyles done by expert professionals for all occasions.</p>
       </div>
       <div class="card">
-        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Skin.png?raw=true" alt="Hair Styling"/>
+        <img src="https://github.com/priyanshurat/BeautySalon/blob/main/Skin.png?raw=true" alt="Skin Care"/>
         <h3>Skin Care</h3>
         <p>Radiant and healthy skin treatments by expert aestheticians for every occasion.</p>
       </div>
@@ -331,7 +431,7 @@
 
   <div class="container">
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3586.3412387661315!2d79.4341580803061!3d25.989636918445388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDU5JzIyLjciTiA3OcKwMjYnMjAuNSJF!5e0!3m2!1sen!2sin!4v1749873431427!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3586.3412387661315!2d79.4341580803061!3d25.989636918445388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDU5JzIyLjciTiA3OcKwMjYnMjAuNSJF!5e0!3m2!1sen!2sin!4v1749873431427!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
     </div>
     <form>
       <h2>Send Us a Query</h2>
@@ -345,9 +445,9 @@
 
   <div class="contact-details">
     <h2>Contact Details</h2>
-    <p><strong>Phone:</strong> +91 8318144174,   +91 6386583708</p>
+    <p><strong>Phone:</strong> +91 8318144174, +91 6386583708</p>
     <p><strong>Email:</strong> sakshismakeover.in@gmail.com</p>
-    <p><strong>Address:</strong> Near Patel Nagar, Old Konch Bus Stand Near Ganga Travels Orai, Uttar Pradesh</p>
+    <p><strong>Address:</strong> Near Patel Nagar, Old Konch Bus Stand Near Ganga Travels, Orai, Uttar Pradesh</p>
     <p><strong>Opening Hours:</strong> 10:00 AM – 8:00 PM (Monday – Sunday)</p>
     <div class="social-icons">
       <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
@@ -355,5 +455,35 @@
       <a href="https://wa.me/919876543210" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
     </div>
   </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = dots.length;
+
+    function showSlide(index) {
+      slideIndex = index;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      showSlide(slideIndex);
+    }
+
+    let slideTimer = setInterval(nextSlide, 5000);
+
+    function currentSlide(index) {
+      clearInterval(slideTimer);
+      showSlide(index);
+      slideTimer = setInterval(nextSlide, 5000);
+    }
+
+    showSlide(slideIndex);
+  </script>
+
 </body>
 </html>
